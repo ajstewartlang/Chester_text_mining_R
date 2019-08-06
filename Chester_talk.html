@@ -21,27 +21,7 @@ class: center, middle, title-slide
 
 
 
-
-class: center
-
-# The following is a fully reproducible talk (just add my accent)
-
-All slides and R code used to generate these slides available 
-[here](https://github.com/ajstewartlang/)
-
-&lt;br style=“line-height:1;”&gt;
-
-&lt;img src="images/ssi.png" width="45%" /&gt;
-
-&lt;br style=“line-height:1;”&gt;
-
-
-.footnote[
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
-]
-
----
-# Visualizing Text Data
+# Text Mining
 
 There's a great book on text mining by Julia Silge and David Robinson all
 written to work with data in Tidy format.
@@ -91,7 +71,7 @@ vis_dat(books)
 ```
 
 .center[
-![](Chester_talk_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
 ]
 ---
 
@@ -191,7 +171,7 @@ all_text %&gt;%
 ```
 ---
 class: center, middle
-&lt;img src="Chester_talk_files/figure-html/unnamed-chunk-13-1.png" width="720" /&gt;
+&lt;img src="Chester_talk_files/figure-html/unnamed-chunk-12-1.png" width="720" /&gt;
 
 ---
 # Sentiment Analysis 
@@ -269,7 +249,7 @@ all_text_sent %&gt;%
   theme(text = element_text(size = 20))
 ```
 ---
-&lt;img src="Chester_talk_files/figure-html/unnamed-chunk-17-1.png" width="720" /&gt;
+&lt;img src="Chester_talk_files/figure-html/unnamed-chunk-16-1.png" width="720" /&gt;
 ---
 # Examining proprtion of usage of each word
 
@@ -326,7 +306,7 @@ book_words %&gt;%
 ---
 # Visualizing the data - Zipf's Law
 
-![](Chester_talk_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
 ---
 # Which words are most important (and unique) to each book?
 
@@ -358,7 +338,7 @@ book_words %&gt;%
   theme(text = element_text(size = 20))
 ```
 ---
-![](Chester_talk_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
 ---
 # N-gram tokenizing
 
@@ -408,7 +388,7 @@ bigrams_counts &lt;- bigrams_filtered %&gt;%
 ```
 ---
 # War of the Worlds bigram network graph
-![](Chester_talk_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
 
 ---
 # Scraping Twitter
@@ -469,10 +449,10 @@ The Tweets dataframe looks like this:
 vis_dat(tweets)
 ```
 
-![](Chester_talk_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
 ]
 ---
-![](Chester_talk_files/figure-html/unnamed-chunk-33-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
 
 ---
 # Scraping Individual Timelines
@@ -489,22 +469,45 @@ timeline_tweets &lt;-
 
 ---
 # Top 20 words in each author's Tweets
-![](Chester_talk_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
 
 ---
 # Which words characterise Neil Gaiman's vs. Stephen King's Tweets?
 
-![](Chester_talk_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
 
 ---
 # At what time do the authors Tweet?
 
-![](Chester_talk_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
 
 ---
 # Neil Gaiman's Tweets by source
 
-![](Chester_talk_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](Chester_talk_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+
+---
+
+class: center
+
+# That was a fully reproducible talk (just add my accent)
+
+All slides and R code used to generate these slides available 
+[here](https://github.com/ajstewartlang/)
+
+&lt;br style=“line-height:1;”&gt;
+
+`.pull-left[
+&lt;img src="images/ssi.png" width="1575" height="80%" /&gt;
+]
+.pull-right[
+&lt;img src="images/bsbr.jpg" width="640" height="70%" /&gt;
+]&lt;br style=“line-height:1;”&gt;
+
+
+.footnote[
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

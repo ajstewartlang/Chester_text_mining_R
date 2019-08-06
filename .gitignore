@@ -34,3 +34,9 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+
+# Rendered slides
+Chester_talk.html
+Chester_talk_files
+script.R
+.Rproj.user

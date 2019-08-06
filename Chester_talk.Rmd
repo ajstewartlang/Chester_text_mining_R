@@ -496,11 +496,16 @@ All slides and R code used to generate these slides available
 
 <br style=“line-height:1;”>
 
-```{r, echo=FALSE, out.width="45%"}
+`.pull-left[
+```{r, echo=FALSE, out.height="80%"}
 knitr::include_graphics("images/ssi.png")
 ```
-
-<br style=“line-height:1;”>
+]
+.pull-right[
+```{r, echo=FALSE, out.height="70%"}
+knitr::include_graphics("images/bsbr.jpg")
+```
+]<br style=“line-height:1;”>
 
 
 .footnote[
