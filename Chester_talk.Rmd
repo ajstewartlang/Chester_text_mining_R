@@ -486,28 +486,17 @@ timeline_tweets %>%
 ```
 
 ---
-
-class: center
-
 # That was a fully reproducible talk (just add my accent)
 
 All slides and R code used to generate these slides available 
-[here](https://github.com/ajstewartlang/)
+[here](https://github.com/ajstewartlang/Chester_text_mining_R)
 
-<br style=“line-height:1;”>
+<br />
 
-`.pull-left[
-```{r, echo=FALSE, out.height="80%"}
+```{r, echo=FALSE, out.height="50%"}
 knitr::include_graphics("images/ssi.png")
 ```
-]
-.pull-right[
-```{r, echo=FALSE, out.height="70%"}
-knitr::include_graphics("images/bsbr.jpg")
-```
-]<br style=“line-height:1;”>
 
+<br />
 
-.footnote[
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
-]
