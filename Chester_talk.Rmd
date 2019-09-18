@@ -5,6 +5,7 @@ author: "</p>Andrew Stewart<br>University of Manchester<br>Twitter: @ajstewart_l
 date: "(updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
+    seal: false
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -12,7 +13,29 @@ output:
       countIncrementalSlides: false
       titleSlideClass: ["center", "middle"]
 ---
+class: center, middle
 
+# Text Mining in R
+
+Andrew Stewart<br><br>
+Division of Neuroscience and Experimental Psychology<br><br>
+University of Manchester<br><br>
+Email: andrew.stewart@manchester.ac.uk<br><br>
+Twitter: @ajstewart_lang<br><br>
+
+.pull-left[
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/ssi.png")
+```
+]
+
+.pull-right[
+```{r, echo=FALSE, out.width="50%"}
+knitr::include_graphics("images/bsbr.jpg")
+```
+]
+
+---
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
@@ -27,7 +50,7 @@ library(textdata)
 library(gutenbergr)
 library(igraph)
 library(ggraph)
-library(visdat)
+library(leaflet)
 ```
 # Text Mining
 
@@ -390,6 +413,24 @@ ggplot(tweets, aes (x = date)) +
        subtitle = "Using Mike Kearney's rtweet package") +
   theme(text = element_text(size = 20))
 ```
+
+---
+class: centre
+
+# Geospatial Plotting of Tweets
+
+```{r, echo=FALSE}
+my_map <- lat_lng(tweets)
+to_plot <- leaflet(my_map) %>% 
+  addTiles()
+```
+
+.center[
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=6, fig.width=8}
+to_plot %>% addCircles(lng = ~lng, lat = ~lat, weight = 8, radius = 40, 
+                 color = "#fb3004", stroke = TRUE, fillOpacity = 0.8)
+```
+]
 
 ---
 # Scraping Individual Timelines
